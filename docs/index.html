@@ -1,1 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlyRank ML Capstone | Aditya Dabhade</title>
 
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background:#f5f5f5;
+            margin:0;
+            padding:0;
+            color:#222;
+            line-height:1.7;
+        }
+
+        header{
+            background:#1f4e79;
+            color:white;
+            text-align:center;
+            padding:40px;
+        }
+
+        section{
+            max-width:1000px;
+            margin:30px auto;
+            background:white;
+            padding:30px;
+            border-radius:8px;
+            box-shadow:0 0 10px rgba(0,0,0,.1);
+        }
+
+        h1,h2{
+            color:#1f4e79;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            margin-top:15px;
+        }
+
+        table,th,td{
+            border:1px solid #ccc;
+        }
+
+        th,td{
+            padding:10px;
+            text-align:left;
+        }
+
+        footer{
+            text-align:center;
+            padding:30px;
+            color:#666;
+        }
+
+        a{
+            color:#1f4e79;
+            text-decoration:none;
+        }
+
+        ul{
+            margin-left:20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Refresh / Content Opportunity Scoring</h1>
+
+<h3>FlyRank Machine Learning Internship Capstone</h3>
+
+<p><b>Author:</b> Aditya Dabhade</p>
+
+<p>
+Repository:
+<a href="https://github.com/adityaa311/flyrank-ml-internship" target="_blank">
+github.com/adityaa311/flyrank-ml-internship
+</a>
+</p>
+
+</header>
+
+<section>
+
+<h2>Abstract</h2>
+
+<p>
+This project investigates whether search performance data can identify
+content pages that are likely to experience declining organic visibility.
+Using the FlyRank ML Internship dataset, DuckDB SQL was used to engineer
+historical performance features while query-level statistics were added
+to improve prediction quality. A Random Forest classifier was trained to
+identify pages likely to decline. The resulting model generates ranked
+recommendations that help SEO teams decide which pages should be refreshed
+first.
+</p>
+
+</section>
+
+<section>
+
+<h2>Problem Statement</h2>
+
+<p>
+The objective is to predict which content pages are likely to lose
+organic search visibility before significant traffic declines occur.
+The model produces ranked recommendations that help editors prioritize
+content refresh activities.
+</p>
+
+</section>
+
+<section>
+
+<h2>Dataset</h2>
+
+<ul>
+
+<li>FlyRank ML Internship Warehouse Dataset</li>
+
+<li>DuckDB over Parquet files</li>
+
+<li>Google Search Console daily performance</li>
+
+<li>Query-level aggregated features</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>Model</h2>
+
+<p><b>Algorithm</b></p>
+
+<ul>
+
+<li>Random Forest Classifier</li>
+
+</ul>
+
+<p><b>Features</b></p>
+
+<ul>
+
+<li>Previous 90-day impressions</li>
+
+<li>Previous 90-day clicks</li>
+
+<li>Average Position</li>
+
+<li>Visible Query Count</li>
+
+<li>Rare Query Share</li>
+
+<li>Anonymous Query Share</li>
+
+<li>Top Query Share</li>
+
+<li>Click Through Rate</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>Evaluation</h2>
+
+<table>
+
+<tr>
+
+<th>Metric</th>
+
+<th>Value</th>
+
+</tr>
+
+<tr>
+
+<td>Baseline Accuracy</td>
+
+<td>81%</td>
+
+</tr>
+
+<tr>
+
+<td>Model Accuracy</td>
+
+<td>89%</td>
+
+</tr>
+
+<tr>
+
+<td>Precision</td>
+
+<td>0.90</td>
+
+</tr>
+
+<tr>
+
+<td>Recall</td>
+
+<td>0.87</td>
+
+</tr>
+
+<tr>
+
+<td>F1 Score</td>
+
+<td>0.88</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>Recommendations</h2>
+
+<ol>
+
+<li>Refresh pages with declining impressions.</li>
+
+<li>Improve metadata for pages with low CTR.</li>
+
+<li>Expand content targeting additional queries.</li>
+
+<li>Monitor pages dependent on a single search query.</li>
+
+</ol>
+
+</section>
+
+<section>
+
+<h2>Repository</h2>
+
+<p>
+
+GitHub Repository:
+
+<br><br>
+
+<a href="https://github.com/adityaa311/flyrank-ml-internship">
+
+https://github.com/adityaa311/flyrank-ml-internship
+
+</a>
+
+</p>
+
+</section>
+
+<section>
+
+<h2>Acknowledgments</h2>
+
+<p>
+
+Built on the FlyRank ML Internship dataset.
+
+</p>
+
+<p>
+
+<a href="https://flyrank.ai" target="_blank">
+
+https://flyrank.ai
+
+</a>
+
+</p>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 Aditya Dabhade
+
+</p>
+
+</footer>
+
+</body>
+
+</html>
