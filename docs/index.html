@@ -1,70 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlyRank ML Capstone | Aditya Dabhade</title>
 
-    <style>
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-            background:#f5f5f5;
-            margin:0;
-            padding:0;
-            color:#222;
-            line-height:1.7;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        header{
-            background:#1f4e79;
-            color:white;
-            text-align:center;
-            padding:40px;
-        }
+<title>FlyRank ML Internship Capstone</title>
 
-        section{
-            max-width:1000px;
-            margin:30px auto;
-            background:white;
-            padding:30px;
-            border-radius:8px;
-            box-shadow:0 0 10px rgba(0,0,0,.1);
-        }
+<style>
 
-        h1,h2{
-            color:#1f4e79;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-        table{
-            width:100%;
-            border-collapse:collapse;
-            margin-top:15px;
-        }
+body{
 
-        table,th,td{
-            border:1px solid #ccc;
-        }
+font-family:Arial,Helvetica,sans-serif;
+background:#f4f6f9;
+color:#333;
+line-height:1.8;
 
-        th,td{
-            padding:10px;
-            text-align:left;
-        }
+}
 
-        footer{
-            text-align:center;
-            padding:30px;
-            color:#666;
-        }
+header{
 
-        a{
-            color:#1f4e79;
-            text-decoration:none;
-        }
+background:#1f4e79;
+color:white;
+padding:70px 20px;
+text-align:center;
 
-        ul{
-            margin-left:20px;
-        }
-    </style>
+}
+
+header h1{
+
+font-size:42px;
+margin-bottom:20px;
+
+}
+
+header p{
+
+font-size:18px;
+margin:8px 0;
+
+}
+
+header a{
+
+color:white;
+text-decoration:none;
+font-weight:bold;
+
+}
+
+header a:hover{
+
+text-decoration:underline;
+
+}
+
+.container{
+
+width:90%;
+max-width:1000px;
+margin:50px auto;
+
+}
+
+section{
+
+background:white;
+padding:35px;
+margin-bottom:35px;
+border-radius:12px;
+box-shadow:0 6px 20px rgba(0,0,0,.08);
+
+}
+
+section h2{
+
+color:#1f4e79;
+margin-bottom:20px;
+padding-bottom:10px;
+border-bottom:2px solid #dddddd;
+
+}
+
+ul{
+
+margin-left:30px;
+
+}
+
+ol{
+
+margin-left:30px;
+
+}
+
+table{
+
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+
+}
+
+table th{
+
+background:#1f4e79;
+color:white;
+padding:12px;
+
+}
+
+table td{
+
+border:1px solid #ddd;
+padding:12px;
+
+}
+
+footer{
+
+background:#1f4e79;
+color:white;
+padding:25px;
+text-align:center;
+margin-top:40px;
+
+}
+
+footer a{
+
+color:white;
+
+}
+
+code{
+
+background:#eeeeee;
+padding:3px 6px;
+border-radius:4px;
+
+}
+
+</style>
 
 </head>
 
@@ -72,34 +156,44 @@
 
 <header>
 
-<h1>Refresh / Content Opportunity Scoring</h1>
+<h1>Google Search Ranking & Discoverability Capstone</h1>
 
-<h3>FlyRank Machine Learning Internship Capstone</h3>
+<p><strong>Author:</strong> Aditya Dabhade</p>
 
-<p><b>Author:</b> Aditya Dabhade</p>
+<p><strong>Lane:</strong> Refresh / Content Opportunity Scoring</p>
 
 <p>
-Repository:
-<a href="https://github.com/adityaa311/flyrank-ml-internship" target="_blank">
-github.com/adityaa311/flyrank-ml-internship
+
+<strong>Repository:</strong>
+
+<a href="https://github.com/adityaa311/flyrank-ml-internship">
+
+https://github.com/adityaa311/flyrank-ml-internship
+
 </a>
+
 </p>
 
 </header>
+
+<div class="container">
 
 <section>
 
 <h2>Abstract</h2>
 
 <p>
-This project investigates whether search performance data can identify
-content pages that are likely to experience declining organic visibility.
-Using the FlyRank ML Internship dataset, DuckDB SQL was used to engineer
-historical performance features while query-level statistics were added
-to improve prediction quality. A Random Forest classifier was trained to
-identify pages likely to decline. The resulting model generates ranked
-recommendations that help SEO teams decide which pages should be refreshed
-first.
+
+This project investigates whether search performance data can identify content pages that are likely to experience declining organic visibility.
+
+The analysis uses the FlyRank ML Internship dataset containing pseudonymized Google Search Console performance metrics together with query-level search information.
+
+Features were engineered using DuckDB SQL before training a Random Forest classifier.
+
+The model learns relationships between historical impressions, clicks, query diversity and search behavior to identify declining content.
+
+The final output is a ranked list of pages that should be refreshed by SEO teams.
+
 </p>
 
 </section>
@@ -109,10 +203,11 @@ first.
 <h2>Problem Statement</h2>
 
 <p>
-The objective is to predict which content pages are likely to lose
-organic search visibility before significant traffic declines occur.
-The model produces ranked recommendations that help editors prioritize
-content refresh activities.
+
+The objective is to identify content pages beginning to lose search visibility before significant traffic declines occur.
+
+The model generates ranked recommendations that help editors prioritize which pages should be refreshed first.
+
 </p>
 
 </section>
@@ -125,11 +220,15 @@ content refresh activities.
 
 <li>FlyRank ML Internship Warehouse Dataset</li>
 
-<li>DuckDB over Parquet files</li>
+<li>dim_clients</li>
 
-<li>Google Search Console daily performance</li>
+<li>fact_content_daily_performance</li>
 
-<li>Query-level aggregated features</li>
+<li>fact_content_query_90d</li>
+
+<li>Pseudonymized client information only</li>
+
+<li>No URLs, client names or private search queries were used.</li>
 
 </ul>
 
@@ -137,17 +236,27 @@ content refresh activities.
 
 <section>
 
-<h2>Model</h2>
-
-<p><b>Algorithm</b></p>
+<h2>Methodology</h2>
 
 <ul>
 
-<li>Random Forest Classifier</li>
+<li>DuckDB SQL feature engineering</li>
+
+<li>90-day historical momentum features</li>
+
+<li>Query-level feature aggregation</li>
+
+<li>Random Forest Classification</li>
+
+<li>GroupShuffleSplit validation by client</li>
 
 </ul>
 
-<p><b>Features</b></p>
+</section>
+
+<section>
+
+<h2>Features Used</h2>
 
 <ul>
 
@@ -159,9 +268,9 @@ content refresh activities.
 
 <li>Visible Query Count</li>
 
-<li>Rare Query Share</li>
+<li>Rare Impression Share</li>
 
-<li>Anonymous Query Share</li>
+<li>Anonymous Impression Share</li>
 
 <li>Top Query Share</li>
 
@@ -173,7 +282,7 @@ content refresh activities.
 
 <section>
 
-<h2>Evaluation</h2>
+<h2>Results</h2>
 
 <table>
 
@@ -231,6 +340,22 @@ content refresh activities.
 
 <section>
 
+<h2>Interpretation</h2>
+
+<p>
+
+Historical impressions were the strongest predictor of future decline.
+
+Pages attracting traffic from many different search queries generally remained more stable.
+
+Pages relying heavily on a single query showed higher risk of declining visibility.
+
+</p>
+
+</section>
+
+<section>
+
 <h2>Recommendations</h2>
 
 <ol>
@@ -239,9 +364,9 @@ content refresh activities.
 
 <li>Improve metadata for pages with low CTR.</li>
 
-<li>Expand content targeting additional queries.</li>
+<li>Expand content targeting additional search queries.</li>
 
-<li>Monitor pages dependent on a single search query.</li>
+<li>Monitor pages relying on one dominant query.</li>
 
 </ol>
 
@@ -249,21 +374,50 @@ content refresh activities.
 
 <section>
 
-<h2>Repository</h2>
+<h2>Reproducibility</h2>
 
 <p>
 
-GitHub Repository:
-
-<br><br>
-
-<a href="https://github.com/adityaa311/flyrank-ml-internship">
-
-https://github.com/adityaa311/flyrank-ml-internship
-
-</a>
+Clone Repository
 
 </p>
+
+<pre><code>git clone https://github.com/adityaa311/flyrank-ml-internship
+cd flyrank-ml-internship</code></pre>
+
+<p>
+
+Install Requirements
+
+</p>
+
+<pre><code>pip install -r requirements.txt</code></pre>
+
+<p>
+
+Random Seed: <strong>42</strong>
+
+</p>
+
+<p>
+
+Libraries Used
+
+</p>
+
+<ul>
+
+<li>DuckDB</li>
+
+<li>Pandas</li>
+
+<li>NumPy</li>
+
+<li>Scikit-Learn</li>
+
+<li>Matplotlib</li>
+
+</ul>
 
 </section>
 
@@ -273,27 +427,25 @@ https://github.com/adityaa311/flyrank-ml-internship
 
 <p>
 
-Built on the FlyRank ML Internship dataset.
+Built on the FlyRank ML Internship Dataset.
 
 </p>
 
 <p>
 
-<a href="https://flyrank.ai" target="_blank">
-
-https://flyrank.ai
-
-</a>
+<a href="https://flyrank.ai">https://flyrank.ai</a>
 
 </p>
 
 </section>
 
+</div>
+
 <footer>
 
 <p>
 
-© 2026 Aditya Dabhade
+© 2026 Aditya Dabhade | FlyRank ML Internship Capstone
 
 </p>
 
